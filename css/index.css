@@ -11,17 +11,17 @@ html, body {
 @keyframes colour-change {
   0% {background-color: rgb(255, 175, 175);}
   33% {background-color: rgb(173, 255, 173);}
-  66% {background-color: rgb(131, 131, 255);}
+  66% {background-color: rgb(151, 151, 255);}
   100% {background-color: rgb(255, 175, 175);} 
 }
 body {
   background-color: #ddd;
-  animation: colour-change 30s linear infinite;
+  animation: colour-change 60s linear infinite;
   padding: 15vh 0;
 }
 div {
   background-color: #ddd;
-  transition: background-color 3s ease-in;
+  transition: background-color 2s ease-in;
   max-width: 888px;
   padding: 1em 3em;;
 }
@@ -32,7 +32,7 @@ div:nth-child(2):hover {
   background-color: rgb(173, 255, 173);
 }
 div:nth-child(3):hover {
-  background-color: rgb(131, 131, 255);
+  background-color: rgb(151, 151, 255);
 }
 div:hover h2 {
   text-decoration: underline;
@@ -48,14 +48,25 @@ li {
   list-style: none;
 }
 li>a {
-  transition:all 1s linear;
-  background: linear-gradient(to left, transparent 50%, white 50%);
-  background-size: 200% 100%;
-  background-position:right bottom;
+  position:relative;
+  z-index: 0;
 }
-li>a:hover,
-li>a:focus{
-  background-position:left bottom;
+li>a::after {
+  content: "";
+  position: absolute;
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 0;
+  transition: all 1.5s ease-in;
+  z-index: -1;
+}
+li>a:hover:after,
+li>a:focus:after {
+  transform: scaleX(1);
 }
 svg {
   width: 2em;
