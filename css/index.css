@@ -1,0 +1,75 @@
+html, body {
+  box-sizing: border-box;
+  min-height:100%;
+  margin:0;
+  padding:0;
+  font-family: Courier, monospace;
+}
+*, *:before, *:after {
+      box-sizing: inherit;
+}
+@keyframes colour-change {
+  0% {background-color: rgb(255, 175, 175);}
+  33% {background-color: rgb(173, 255, 173);}
+  66% {background-color: rgb(131, 131, 255);}
+  100% {background-color: rgb(255, 175, 175);} 
+}
+body {
+  background-color: #ddd;
+  animation: colour-change 30s linear infinite;
+  padding: 15vh 0;
+}
+div {
+  background-color: #ddd;
+  transition: background-color 3s ease-in;
+  max-width: 888px;
+  padding: 1em 3em;;
+}
+div:nth-child(1):hover {
+  background-color: rgb(255, 175, 175);
+}
+div:nth-child(2):hover {
+  background-color: rgb(173, 255, 173);
+}
+div:nth-child(3):hover {
+  background-color: rgb(131, 131, 255);
+}
+div:hover h2 {
+  text-decoration: underline;
+}
+h1 {
+  text-align: justify;
+  text-align-last: justify;
+}
+h1, h2 {
+  margin-top: 0;
+}
+li {
+  list-style: none;
+}
+li>a {
+  transition:all 1s linear;
+  background: linear-gradient(to left, transparent 50%, white 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+}
+li>a:hover,
+li>a:focus{
+  background-position:left bottom;
+}
+svg {
+  width: 2em;
+  height:auto;
+  transition: transform 0.5s ease-out;
+}
+svg:hover {
+  transform:scale(1.1);
+}
+::-moz-selection {
+  color: #444;
+  background: white;
+}
+::selection {
+    color: #444; 
+    background: white;
+}
