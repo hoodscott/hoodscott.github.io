@@ -18,7 +18,7 @@
       <ul>
         <li>
           <a href="http://cairds.scotthood.co.uk">cairds</a> -
-          Card 'game' builder and player.
+          Card 'game' builder and player
         </li>
       </ul>
     </div>
@@ -31,5 +31,20 @@
         </svg>
       </a>
     </div>
+
+    <script>
+      let count = 0;
+      document.addEventListener("keypress", function(e) {
+        if (event.keyCode === 120) {
+          count++;
+          if (count >= 3) {
+            document.location.assign('xxx/hexgrid.html');
+          }
+        }
+        else {
+          count = 0;
+        }
+      })
+    </script>
   </body>
 </html>

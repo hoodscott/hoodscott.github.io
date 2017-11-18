@@ -1,0 +1,207 @@
+<!doctype HTML>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hexgrid - scotthood</title>
+    <style>
+      body {
+        z-index: -2;
+        position: relative;
+        font-family: Courier, monospace;
+        margin: 0;
+      }
+      h1 {
+        text-align: justify;
+        text-align-last: justify;
+      }
+      h1, h2 {
+        margin-top:0;
+      }
+      h1>a {
+        color: black;
+      }
+      .info {
+        margin: 15vh 0;
+        padding: 1em 3em;
+        background: gold;
+        max-width: 888px;
+        box-sizing: border-box;
+      }
+      #bg{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 4000px;
+        z-index:-1;
+        overflow:hidden;
+      }
+      .hexaholder:nth-child(1) {
+      margin-top: -57.74px;
+      }
+      .hexaholder {
+        margin-top: -28.87px;
+      }
+      .hexaholder:nth-child(even) {
+        margin-left: -55px;
+      }
+      .hexaholder>div {
+        display: inline-block;
+        position: relative;
+        width: 100px; 
+        height: 57.74px;
+        background-color: goldenrod;
+        border-color: goldenrod;
+        margin: 28.87px 0;
+      }
+      .hexaholder>div:hover {
+        background-color: gold;
+        border-color: gold;
+      }
+      .hexaholder>div:before,
+      .hexaholder>div:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+      }
+      .hexaholder>div:before {
+        bottom: 100%;
+        border-bottom: 28.87px solid;
+        border-bottom-color: inherit;
+      }
+      .hexaholder>div:after {
+        top: 100%;
+        width: 0;
+        border-top: 28.87px solid;
+        border-top-color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg">
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+      <div class="hexaholder">
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h1>Scott Hood</h1>
+      <h2><a href="/">index.html</a></h2>
+      <p>background hexagon grid</p>
+      <p>Using hexagons from <a href="http://csshexagon.com/">http://csshexagon.com/</a></p>
+      <p>bzz</p>
+    </div>
+  </body>
+</html>
