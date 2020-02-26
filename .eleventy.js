@@ -1,13 +1,15 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy('css');
 
   return {
     dir: {
-      input: "src",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
-    }
+      input: 'src',
+      includes: '_includes',
+      data: '_data',
+      output: '_site'
+    },
+    markdownTemplateEngine: 'njk',
+    templateFormats: ['html', 'njk', 'md']
 
   }
 }

@@ -9,33 +9,40 @@ html, body {
       box-sizing: inherit;
 }
 @keyframes colour-change {
-  0% {background-color: rgb(255, 175, 175);}
-  33% {background-color: rgb(173, 255, 173);}
-  66% {background-color: rgb(151, 151, 255);}
-  100% {background-color: rgb(255, 175, 175);} 
+  0% {background-color: hsl(0, 100%, 90%);}
+  20% {background-color: hsl(44, 100%, 90%);}
+  40% {background-color: hsl(120, 100%, 90%);}
+  60% {background-color: hsl(233, 100%, 90%);}
+  80% {background-color: hsl(256, 100%, 90%);}
+  100% {background-color: hsl(0, 100%, 90%);} 
 }
 body {
-  background-color: #ddd;
-  animation: colour-change 60s linear infinite;
+  animation: colour-change 120s linear infinite;
   padding: 15vh 0;
 }
-section {
+body, header, footer, section {
   background-color: #ddd;
-  transition: background-color 2s ease-in;
+}
+header, footer, section {
+  background-color: #ddd;
+  transition: background-color 1s ease-in;
   max-width: 888px;
   padding: 1em 3em;;
 }
-section:nth-child(1):hover {
-  background-color: rgb(255, 175, 175);
+header:hover {
+  background-color: hsl(0, 100%, 90%);
 }
-section:nth-child(2):hover {
-  background-color: rgb(173, 255, 173);
+section:nth-child(3n + 1):hover {
+  background-color: hsl(44, 100%, 90%);
 }
-section:nth-child(3):hover {
-  background-color: rgb(151, 151, 255);
+section:nth-child(3n + 2):hover {
+  background-color: hsl(120, 100%, 90%);
 }
-section:hover h2 {
-  text-decoration: underline;
+section:nth-child(3n + 3):hover {
+  background-color: hsl(233, 100%, 90%);
+}
+footer:hover {
+  background-color: hsl(256, 100%, 90%);
 }
 h1 {
   text-align: justify;
