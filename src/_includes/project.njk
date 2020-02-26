@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<article>
+  <header class="colour-section">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+  </header>
+  <section class="colour-section">
+    {{ content | safe }}
+  </section>
+</article>

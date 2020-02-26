@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/hoodscott/hoodscott.github.io#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-attrs": "^3.0.2"
   }
 }

@@ -7,17 +7,18 @@
     <link href="/css/index.css" rel="stylesheet"/>
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Scott Hood</h1>
       <nav>
-        <a href="/">Page 1</a>
-        <a href="/page2">Page 2</a>
+        <a href="/" class="{% if title | lower == 'home' %}active{% endif %}">Home</a>
+        {# <a href="/#projects">Projects</a>
+        <a href="/#links">Links</a> #}
       </nav>
     </header>
     <main>
       {{ content | safe }}
     </main>
-    <footer>
+    <footer id="links">
       <h2>Links</h2>
       <a href="https://www.github.com/hoodscott/">
         <svg version="1.1" viewBox="0 0 16 16" height="32" width="32">

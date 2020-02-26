@@ -6,15 +6,15 @@ html, body {
   font-family: Courier, monospace;
 }
 *, *:before, *:after {
-      box-sizing: inherit;
+  box-sizing: inherit;
 }
 @keyframes colour-change {
-  0% {background-color: hsl(0, 100%, 90%);}
-  20% {background-color: hsl(44, 100%, 90%);}
-  40% {background-color: hsl(120, 100%, 90%);}
-  60% {background-color: hsl(233, 100%, 90%);}
-  80% {background-color: hsl(256, 100%, 90%);}
-  100% {background-color: hsl(0, 100%, 90%);} 
+  0% {background-color: hsl(0, 100%, 85%);}
+  20% {background-color: hsl(44, 100%, 85%);}
+  40% {background-color: hsl(120, 100%, 85%);}
+  60% {background-color: hsl(233, 100%, 85%);}
+  85% {background-color: hsl(256, 100%, 85%);}
+  100% {background-color: hsl(0, 100%, 85%);} 
 }
 body {
   animation: colour-change 120s linear infinite;
@@ -29,27 +29,32 @@ header, footer, section {
   max-width: 888px;
   padding: 1em 3em;;
 }
-header:hover {
-  background-color: hsl(0, 100%, 90%);
+#main-header:hover {
+  background-color: hsl(0, 100%, 85%);
 }
-section:nth-child(3n + 1):hover {
-  background-color: hsl(44, 100%, 90%);
+.colour-section:nth-child(3n + 1):hover {
+  background-color: hsl(44, 100%, 85%);
 }
-section:nth-child(3n + 2):hover {
-  background-color: hsl(120, 100%, 90%);
+.colour-section:nth-child(3n + 2):hover {
+  background-color: hsl(120, 100%, 85%);
 }
-section:nth-child(3n + 3):hover {
-  background-color: hsl(233, 100%, 90%);
+.colour-section:nth-child(3n + 3):hover {
+  background-color: hsl(233, 100%, 85%);
 }
-footer:hover {
-  background-color: hsl(256, 100%, 90%);
+#links:hover {
+  background-color: hsl(256, 100%, 85%);
 }
 h1 {
   text-align: justify;
   text-align-last: justify;
 }
-h1, h2 {
+h1, h2, h3 {
   margin-top: 0;
+}
+a.active {
+  text-decoration: none;
+  pointer-events: none;
+  font-weight: 400;
 }
 li {
   list-style: none;
