@@ -1,2 +1,5 @@
-# hoodscott.github.io
-Github Pages Site
+# Personal Site Hosted with Github Pages
+
+[hoodscott.github.io]()
+
+Built with eleventy

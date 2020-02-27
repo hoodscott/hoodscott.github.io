@@ -1,6 +1,6 @@
 <h2 id="projects">Projects</h2>
 <ul>
-{% for project in collections.project %}
+{% for project in collections.project | reverse %}
   <li><a href="{{ project.url | url }}">{{ project.data.title }}</a> - {{ project.data.description }}</li>
 {% endfor %}
 </ul
