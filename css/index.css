@@ -100,6 +100,22 @@ svg:hover {
     color: #444; 
     background: white;
 }
-img {
-  max-width: 100%;
+img, iframe {
+  width: 100%;
+}
+iframe {
+  height: 30vh;
+  border: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
