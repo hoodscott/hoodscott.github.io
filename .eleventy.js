@@ -4,10 +4,11 @@ const markdownItCont = require('markdown-it-container');
 const htmlMin = require('html-minifier');
 
 module.exports = eleventyConfig => {
+  /* Pass the asset folders through to the build destination folder */
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('img');
 
-  /* Add markdown library for adding html attributes */
+  /* Add markdown library for adding html attributes and grouping with containers */
   const mdOptions = {
     html: true
   };
@@ -36,6 +37,9 @@ module.exports = eleventyConfig => {
     return content;
   });
 
+  /* Configuring the folders for the data and templates,
+     choosing the template engines to use,
+     and setting the filetypes that will be modified */
   return {
     dir: {
       input: 'src',
