@@ -5,6 +5,7 @@ const htmlMin = require('html-minifier');
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('img');
 
   /* Add markdown library for adding html attributes */
   const mdOptions = {

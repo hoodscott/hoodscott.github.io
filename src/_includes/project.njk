@@ -4,9 +4,19 @@ layout: base.njk
 <article>
   <header class="colour-section">
     <h2>{{ title }}</h2>
-    <p>{{ description }}</p>
+    <img src="{{ image | url }}" alt="{{ image_text }}"/>
   </header>
-  <section class="colour-section">
-    {{ content | safe }}
-  </section>
+  {{ content | safe }}
+  {% if github or site %}
+  <footer class="colour-section">
+    <ul class="inline">
+    {% if site %}
+      <li><a href="{{ site | url }}">Project Link</a></li>
+    {% endif %}
+    {% if github %}
+      <li><a href="{{ github | url }}">Github Link</a></li>
+    {% endif %}
+    </ul>
+  </footer>
+  {% endif %}
 </article>
