@@ -88,10 +88,6 @@ svg {
 svg:hover {
   transform:scale(1.1);
 }
-::-moz-selection {
-  color: #444;
-  background: white;
-}
 ::selection {
     color: #444; 
     background: white;
