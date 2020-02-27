@@ -4,7 +4,11 @@ layout: base.njk
 <article>
   <header class="colour-section">
     <h2>{{ title }}</h2>
+    {% if title == 'website' %}
+    <iframe src="{{ site | url }}" style="overflow:hidden;"></iframe>
+    {% else %}
     <img src="{{ image | url }}" alt="{{ image_text }}"/>
+    {% endif %}
   </header>
   {{ content | safe }}
   {% if github or site %}
