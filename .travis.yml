@@ -11,5 +11,6 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   fqdn: scotthood.co.uk
+  target-branch: master
   on:
-    branch: master
+    branch: dev
