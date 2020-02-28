@@ -98,8 +98,8 @@ svg:hover {
   transform:scale(1.1);
 }
 ::selection {
-    color: #444; 
-    background: white;
+  color: #444;
+  background: white;
 }
 img, iframe {
   width: 100%;
