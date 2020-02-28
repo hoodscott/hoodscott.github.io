@@ -3,9 +3,13 @@ layout: base.njk
 ---
 <article>
   <header class="colour-section">
-    <h2>{{ title }}</h2>
+    <h2 class="project-title">{{ title }}
+      <time datetime="{{ date | isoDate }}" title="{{ date | isoDate }}">
+        {{ date | romanYear }}
+      </time>
+    </h2>
     {% if title == 'website' %}
-    <iframe src="{{ site | url }}" style="overflow:hidden;"></iframe>
+    <iframe src="{{ site | url }}"></iframe>
     {% else %}
     <img src="{{ image | url }}" alt="{{ image_text }}"/>
     {% endif %}
@@ -13,7 +17,7 @@ layout: base.njk
   {{ content | safe }}
   {% if github or site %}
   <footer class="colour-section">
-    <ul class="inline">
+    <ul class="links">
     {% if site %}
       <li><a href="{{ site | url }}">Project Link</a></li>
     {% endif %}

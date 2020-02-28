@@ -59,9 +59,11 @@ a.active {
   pointer-events: none;
   font-weight: 400;
 }
-ul.inline {
+ul.links, .project-title {
   display: flex;
   justify-content: space-between;
+}
+ul.links {
   padding: 0;
 }
 li {
