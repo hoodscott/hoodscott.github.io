@@ -72,8 +72,8 @@ module.exports = eleventyConfig => {
     const dt = new Date(value);
     if (dt) {
       return dt.getFullYear() + '-' +
-              dt.getMonth() + '-' +
-              dt.getDate();
+              dt.getMonth().toString().padStart(2, '0') + '-' +
+              dt.getDate().toString().padStart(2, '0');
     }
     return null;
   });
