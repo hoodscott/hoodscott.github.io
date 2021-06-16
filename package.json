@@ -31,7 +31,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-container": "^2.0.0",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.36",
     "postcss-cli": "^7.1.0"
   }
 }
