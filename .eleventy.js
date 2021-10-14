@@ -28,6 +28,7 @@ module.exports = eleventyConfig => {
   /* Pass the asset folders through to the build destination folder */
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy({ static: "/" });
 
   /* Add markdown library for adding html attributes and grouping with containers */
   const mdOptions = {
