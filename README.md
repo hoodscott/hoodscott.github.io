@@ -11,3 +11,8 @@ Continuous Integration has been set up using [Travis](https://travis-ci.org/) wh
 - `npm run build` Runs build scripts to generate the html and css files into the `_site` folder.
 - `npm run clean` tidies up build folder (`_site`).
 - `npm run eleventy:serve` Boot up a local Browsersync web server to apply changes and refresh automatically when new changes are made.
+
+## Notes
+
+Make sure to create new branches for changes and merge back into `dev` when done (Travis kicks off a new build for every commit to the `dev` branch).  If this build goes well, the generated pages (in `_site`) are pushed to the `gh-pages` branch to be served via GitHub Pages.  
+Need to remember to update personal access token with `repo` scope for Travis [here]( https://github.com/settings/tokens/new) in case it has expired.  Travis docs [here]( https://docs.travis-ci.com/user/deployment/pages/).

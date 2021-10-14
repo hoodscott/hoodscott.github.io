@@ -5,12 +5,11 @@ before_script:
   - npm run build
 script: eleventy
 deploy:
-  local-dir: _site
+  local_dir: _site
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  keep-history: true
+  github_token: $GITHUB_TOKEN  # Set in travis-ci.com dashboard, marked secure
+  keep_history: true
   fqdn: scotthood.co.uk
-  target-branch: master
+  target_branch: gh-pages
   on:
     branch: dev
