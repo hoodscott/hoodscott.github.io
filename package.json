@@ -24,14 +24,14 @@
   "homepage": "https://github.com/hoodscott/hoodscott.github.io#readme",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "autoprefixer": "^9.7.4",
-    "cssnano": "^4.1.10",
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^9.8.8",
+    "cssnano": "^5.0.8",
     "html-minifier": "^4.0.0",
     "markdown-it": "^10.0.0",
-    "markdown-it-attrs": "^3.0.2",
+    "markdown-it-attrs": "^3.0.3",
     "markdown-it-container": "^2.0.0",
-    "postcss": "^7.0.27",
-    "postcss-cli": "^7.1.0"
+    "postcss": "^7.0.39",
+    "postcss-cli": "^7.1.2"
   }
 }
