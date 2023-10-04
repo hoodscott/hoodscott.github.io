@@ -4,12 +4,10 @@
   "description": "Github Pages Site",
   "main": "config.eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf _site/",
-    "eleventy:prod": "npx eleventy",
-    "eleventy:serve": "npx eleventy --serve",
-    "css": "npx postcss ./_site/css/*.css --replace",
-    "build": "npm run -s eleventy:prod css"
+    "11ty": "npx eleventy",
+    "11ty:s": "npx eleventy --serve",
+    "css": "npx postcss ./_site/css/*.css --replace"
   },
   "repository": {
     "type": "git",
