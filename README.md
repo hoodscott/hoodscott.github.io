@@ -4,7 +4,7 @@ The site is generated using [Eleventy](https://www.11ty.dev/) which stitches tog
 
 Once the site is built with Eleventy, there is a postCSS script that is ran to autoprefix and then minify the CSS. There are some npm scripts that can be ran to automate the above processes.
 
-Continuous Integration has been set up using [Travis](https://travis-ci.org/) which listens for changes in a GitHub branch, runs the npm script to build the project and (if everything goes well) will then push the changes to the master branch. Once there, the project will be picked up and deployed to [Github Pages](https://pages.github.com/) automatically.
+Continuous Integration has been set up using [Travis](https://travis-ci.org/) which listens for changes in branch `dev`, runs the npm script to build the project and (if everything goes well) will then push the changes to the `gh-pages` branch. Once there, the project will be deployed with [Github Pages](https://pages.github.com/) automatically.
 
 ## Useful Commands
 
