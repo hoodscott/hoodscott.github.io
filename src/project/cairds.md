@@ -4,7 +4,7 @@ description: card 'game' builder and player
 date: 2017-11-18
 layout: project.njk
 github: https://github.com/hoodscott/cairds
-site: http://cairds.scotthood.co.uk/
+site: 
 image: /img/cairds.png
 image_text: Two people playing in the same four player game of poker
 ---

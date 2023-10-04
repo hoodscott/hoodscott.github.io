@@ -4,7 +4,7 @@ description: this website - very meta
 date: 2020-02-27
 layout: project.njk
 github: https://github.com/hoodscott/hoodscott.github.io
-site: http://scotthood.co.uk/
+site: https://scotthood.co.uk/
 image: 
 image_text: 
 ---
@@ -22,7 +22,7 @@ image_text:
 
 ### Description
 
-This is the website you are reading this description on.  The design is based on a one page site I created a while back which has now been converted to templates so it is easy to add new pages.
+This is the website you are reading this description on.  The design is based on a one page site I made a while back which has now been converted to templates so it is easy to add new pages.
 
 The site is generated using [Eleventy](https://www.11ty.dev/) which stitches together some HTML and Nunjucks files to create the website. It uses a simple script to generate this site, with only some small configuration changes. These allow for HTML attributes to be specified in the Markdown files, for containers to be created around lines of Markdown, and minifies the HTML files using a transform which cuts the filesize down by around 10%.
 
