@@ -1,0 +1,257 @@
+/* #region CSS Reset from https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Typographic tweaks! Add accessible line-height and Improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* #endregion */
+
+/* #region General */
+:root {
+  --colour-primary: hsl(240, 15%, 20%);
+  --colour-secondary: hsl(240, 15%, 76%);
+  --colour-tertiary: hsl(60, 85%, 50%);
+  --colour-tertiary-alt: hsl(60, 85%, 90%);
+}
+
+::selection {
+  color: var(--colour-primary);
+  background: var(--colour-tertiary);
+}
+
+html {
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--colour-primary);
+  color: var(--colour-secondary);
+}
+
+*:focus-visible {
+  box-shadow: 0 0 2px 5px var(--colour-primary);
+  outline-offset: 1px;
+  outline: 2px solid var(--colour-tertiary);
+  position: relative;
+}
+
+p {
+  max-width: 80ch;
+}
+
+.visually-hidden {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+li {
+  padding-inline-start: 3ch;
+}
+
+/* #endregion */
+
+/* #region Permanent Scrollbar */
+
+body,
+#controls {
+  overflow-y: scroll;
+  scrollbar-color: var(--colour-secondary) var(--colour-primary);
+}
+
+body::-webkit-scrollbar,
+#controls::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb,
+#controls::-webkit-scrollbar-thumb {
+  background: var(--colour-secondary);
+}
+
+body::-webkit-scrollbar-track,
+#controls::-webkit-scrollbar-track {
+  background: var(--colour-primary);
+}
+
+/* #endregion */
+
+/* #region Layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#lengths {
+  min-width: 35ch;
+  max-width: 80ch;
+}
+
+#lengths>* {
+  margin: 1rem 0;
+}
+
+#lengths>*:first-child {
+  margin-top: 0;
+}
+
+#lengths>*:last-child {
+  margin-bottom: 0;
+}
+
+#svg-container {
+  min-width: 400px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--colour-secondary);
+  border-radius: 4px;
+  margin-top: 13px;
+}
+
+/* #endregion */
+
+/* #region Form */
+fieldset {
+  border-color: var(--colour-secondary);
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+fieldset.dashed {
+  border-style: dashed;
+  border-color: var(--colour-tertiary-alt);
+}
+
+fieldset>div,
+fieldset>button {
+  margin: 0.5rem 0
+}
+
+fieldset>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+fieldset label::after {
+  content: ":";
+}
+
+input {
+  border-radius: 4px;
+  border-style: solid;
+  text-align: right;
+}
+
+input.length {
+  width: 12ch;
+}
+
+input.angle {
+  width: 8ch;
+}
+
+fieldset>button {
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+button {
+  color: var(--colour-primary);
+  background: var(--colour-tertiary-alt);
+  border: 1px solid var(--colour-primary);
+  border-radius: 4px;
+  padding: 0 1em;
+}
+
+button:hover {
+  filter: saturate(50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    transition: filter ease-in-out 100ms;
+  }
+}
+
+button.primary {
+  background: var(--colour-tertiary);
+  font-weight: bolder;
+}
+
+button,
+label,
+input[type=radio],
+input[type=checkbox] {
+  user-select: none;
+  cursor: pointer;
+}
+
+input {
+  background: var(--colour-secondary);
+  color: var(--colour-primary);
+}
+
+input:disabled {
+  background: var(--colour-primary);
+  color: var(--colour-secondary);
+}
+
+/* #endregion */
