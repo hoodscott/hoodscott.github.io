@@ -144,3 +144,9 @@ ul {
   list-style-type: '- ';
   padding-inline-start: 1rem;
 }
+
+ul.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2em;
+}
