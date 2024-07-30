@@ -11,7 +11,11 @@ layout: base.njk
     {% if title == 'website' %}
     <iframe src="{{ site | url }}"></iframe>
     {% else %}
-    <img src="{{ image | url }}" alt="{{ image_text }}"/>
+    <picture>
+      <source srcset="{{ image | webp | url }}" type="image/webp"/>
+      <source srcset="{{ image | url }}" type="image/png"/>
+      <img src="{{ image | url }}" alt="{{ image_text }}"/>
+    </picture>
     {% endif %}
   </header>
   {% if github or site %}

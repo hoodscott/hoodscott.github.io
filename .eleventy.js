@@ -68,6 +68,13 @@ module.exports = eleventyConfig => {
     }
     return null;
   });
+  /* Add a filter to replace ".png" with "*.webp" */
+  eleventyConfig.addFilter("webp", function(value) {
+    if (value.includes(".png")) {
+      return value.replace(".png", ".webp")
+    }
+    return null;
+  });
   /* Add a filter to convert a date object to an ISO date string */
   eleventyConfig.addFilter("isoDate", function(value) {
     const dt = new Date(value);
