@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Elm Template</title>
+  <meta name="description" content="description goes here">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="elm.min.js"></script>
+
+</head>
+
+<body>
+  <div id="elm-element"></div>
+</body>
+
+<script>
+  Promise.all([
+    fetch("data/gamelist.json").then(response => {
+      if (!response.ok) {
+        throw new Error(`http err: ${response.status}`);
+      }
+      return response.json();
+    }),
+    fetch("data/quiz.json").then(response => {
+      if (!response.ok) {
+        throw new Error(`http err: ${response.status}`);
+      }
+      return response.json();
+    })
+  ]).then(response => initElm(response[0], response[1]))
+
+  function initElm(flagGames, flagQuizes) {
+    const dayZero = new Date(2024, 6, 31);
+    const dayCurrent = new Date();
+    dayCurrent.setHours(0, 0, 0, 0);
+    const msDay = 24 * 60 * 60 * 1000;
+    const daysBetween = Math.round(Math.abs((dayCurrent - dayZero) / msDay));
+
+    Elm.Main.init({
+      node: document.getElementById("elm-element"),
+      flags: { "games": flagGames, "quiz": quizConvert(flagQuizes[daysBetween % flagQuizes.length]) },
+    });
+  }
+
+  function quizConvert(quiz) {
+    return {
+      "date": quiz.date,
+      "game": quiz.game,
+      "clues": [
+        { "title": quiz.clue1, "description": quiz.desc1 },
+        { "title": quiz.clue2, "description": quiz.desc2 },
+        { "title": quiz.clue3, "description": quiz.desc3 },
+        { "title": quiz.clue4, "description": quiz.desc4 },
+        { "title": quiz.clue5, "description": quiz.desc5 },
+      ]
+    };
+  }
+</script>
+
+</html>
