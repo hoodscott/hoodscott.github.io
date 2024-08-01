@@ -10,7 +10,7 @@ Once the site is built with Eleventy, there is a postCSS script that is ran to a
 
 ## Deploy
 
-- `npm run clean` tidies up build folder (`_site`).
+- Delete contents of `_site` directory.
 - `npm run 11ty` Runs build scripts to generate the html and css files into the `_site`.
 - `npm run css` Autoprefixes and then minifies the CSS.
 - Copy contents of `_site` to root of `gh-pages` branch, commit, and push

@@ -4,7 +4,6 @@
   "description": "Github Pages Site",
   "main": "config.eleventy.js",
   "scripts": {
-    "clean": " del -r .\\_site\\",
     "11ty": "npx eleventy",
     "11ty:s": "npx eleventy --serve",
     "css": "npx postcss ./_site/css/*.css --replace"
