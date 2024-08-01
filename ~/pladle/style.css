@@ -136,8 +136,12 @@ h2 {
   font-weight: lighter;
 }
 
-.clues {
+.clues,
+form {
   margin: 1em 0;
+}
+
+.clues {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,22 +152,41 @@ h2 {
   background: rgba(0, 0, 0, 25%);
   border: 1px solid black;
   border-radius: 5px;
-  width: 20rem;
   padding: 1em;
 }
 
-form>input {
+.clues>.clue,
+.input-button-group {
+  width: 20rem;
+  max-width: 90vw;
+}
+
+.input-button-group {
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.input-button-group>input {
+  flex: 1;
+}
+
+.input-button-group>button {
+  flex: 0;
+}
+
+form input {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-form>button[type="submit"] {
+form button[type="submit"] {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: var(--colour-tertiary);
 }
 
-form>button {
+form button {
   border-style: initial;
   padding-block: 2px;
 }
@@ -172,4 +195,15 @@ form .error {
   color: red;
   font-size: smaller;
   font-style: italic;
+  font-weight: initial;
+  margin: 0.5em 0;
+}
+
+a {
+  margin: 0.5em 0;
+  color: var(--colour-tertiary);
+}
+
+a:visited {
+  color: var(--colour-tertiary-alt);
 }
