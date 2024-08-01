@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Elm Template</title>
-  <meta name="description" content="description goes here">
+  <title>pladle</title>
+  <meta name="description" content="guess the game by its trophies">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="elm.min.js"></script>
@@ -32,15 +32,30 @@
   ]).then(response => initElm(response[0], response[1]))
 
   function initElm(flagGames, flagQuizes) {
-    const dayZero = new Date(2024, 6, 31);
-    const dayCurrent = new Date();
-    dayCurrent.setHours(0, 0, 0, 0);
-    const msDay = 24 * 60 * 60 * 1000;
-    const daysBetween = Math.round(Math.abs((dayCurrent - dayZero) / msDay));
+    let puzzleNum = 0
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("n")) {
+      puzzleNum = params.get("n");
+    }
+
+    if (!Number.isInteger(puzzleNum)) {
+      const dayZero = new Date(2024, 6, 31);
+      const dayCurrent = new Date();
+      dayCurrent.setHours(0, 0, 0, 0);
+      const msDay = 24 * 60 * 60 * 1000;
+      const daysBetween = Math.round(Math.abs((dayCurrent - dayZero) / msDay));
+      puzzleNum = daysBetween;
+    }
+
+    puzzleNum = puzzleNum % flagQuizes.length;
 
     Elm.Main.init({
       node: document.getElementById("elm-element"),
-      flags: { "games": flagGames, "quiz": quizConvert(flagQuizes[daysBetween % flagQuizes.length]) },
+      flags: {
+        "games": flagGames,
+        "quiz": quizConvert(flagQuizes[puzzleNum]),
+        "puzzle": puzzleNum
+      },
     });
   }
 
